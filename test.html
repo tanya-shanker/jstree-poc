@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Schematics Feature Model</title>
+	<style>
+		html {
+			margin: 0;
+			padding: 0;
+			font-size: 62.5%;
+		}
+
+		body {
+			max-width: 800px;
+			min-width: 300px;
+			margin: 0 auto;
+			padding: 20px 10px;
+			font-size: 14px;
+			font-size: 1.4em;
+		}
+
+		h1 {
+			font-size: 1.8em;
+		}
+
+		.demo {
+			overflow: auto;
+			border: 1px solid silver;
+			min-height: 100px;
+		}
+	</style>
+	<link rel="stylesheet" href="./dist/themes/default/style.min.css" />
+</head>
+
+<body>
+
+	<h1>Schematics Feature Model</h1>
+	<div id="data" class="demo"></div>
+
+	<script src="./jquery-3.6.0.js"></script>
+	<script src="./dist/jstree.min.js"></script>
+
+	<script>
+
+		$('#data').jstree({
+			'core': {
+				'data': [{
+					"text": "SCHEMATICS",
+					"state": {
+						"opened": true,
+						// "selected" : true
+					},
+					"children": [
+						{
+							"text": "WORKSPACE",
+							"children": [{
+								"text": "New Workspace",
+								"children": [{
+									"text": "Workspace settings",
+									"children": [
+										{
+											"text": "Workspace template settings"
+										},
+										{
+											"text": "Workspace input settings"
+										},
+										{
+											"text": "Workspace status"
+										},
+									]
+								},
+								{
+									"text": "Workspace commands (refresh, plan, apply, destroy)"
+								},
+								{
+									"text": "Workspace jobs",
+									"children": [
+										{
+											"text": "Workspace job logs",
+										},
+										{
+											"text": "Workspace job status",
+										},
+										{
+											"text": "Workspace job outputs",
+										},
+									]
+								},
+								{
+									"text": "Workspace resources"
+								},
+								{
+									"text": "Workspace outputs"
+								},
+								]
+							},
+							]
+						},
+						{
+							"text": "ACTIONS",
+							"children": [{
+								"text": "New Action",
+								"children": [
+									{
+										"text": "Action settings",
+										"children": [
+											{
+												"text": "Action template settings",
+											},
+											{
+												"text": "Action inventory setting",
+											},
+											{
+												"text": "Action input setting",
+											},
+											{
+												"text": "Action status",
+											},
+										]
+									},
+									{
+										"text": "Action commands (check, run)",
+									},
+									{
+										"text": "Action jobs",
+										"children": [
+											{
+												"text": "Action job log",
+											},
+											{
+												"text": "Action job status",
+											},
+											{
+												"text": "Action job input",
+											},
+										]
+									},
+								]
+							},
+							]
+						}, {
+							"text": "INVENTORY",
+							"children": [
+								{
+									"text": "New Inventory"
+								},
+							]
+						}
+
+					]
+				}
+				]
+			}
+		});
+
+
+	</script>
+</body>
+
+</html>
